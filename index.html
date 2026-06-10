@@ -855,12 +855,13 @@
         // حاسبة الماكروز والبروتين والكربوهيدرات
         function calculateMacros() {
             let weight = parseFloat(document.getElementById('weight').value);
-            let goal = document.getElementById('goal').value;
+             let goal = document.getElementById('goal').value;
             let days = parseInt(document.getElementById('trainingDays').value);
             let calories, protein, carbs;
 
             if(isNaN(weight) || weight <= 0) return alert('برجاء إدخال وزن صحيح لبدء Matrix الحسابية');
 
+   
             let activityMultiplier = 1.2 + (days * 0.1); 
             let maintenanceCalories = Math.round((weight * 24) * activityMultiplier);
 
