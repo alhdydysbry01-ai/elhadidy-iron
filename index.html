@@ -855,14 +855,22 @@
         // حاسبة الماكروز والبروتين والكربوهيدرات
         function calculateMacros() {
             let weight = parseFloat(document.getElementById('weight').value);
-             let goal = document.getElementById('goal').value;
-            let days = parseInt(document.getElementById('trainingDays').value);
-            let calories, protein, carbs;
+            function calculateMacros() {
+    const weight = document.getElementById('weight').value;
+    const goal = document.getElementById('goal').value;
+    const days = document.getElementById('trainingDays').value;
 
-            if(isNaN(weight) || weight <= 0) return alert('برجاء إدخال وزن صحيح لبدء Matrix الحسابية');
+    console.log("البيانات اللي دخلت:", weight, goal, days); // دي هتطلعلك الداتا في الـ Console
 
-   
-            let activityMultiplier = 1.2 + (days * 0.1); 
+    if (weight === "" || weight <= 0) {
+        alert("يا بطل، دخل وزن صحيح عشان نقدر نحسب!");
+        return;
+    }
+
+    // هنا معادلاتك...
+    alert("جارٍ الحساب... البيانات وصلت!");
+}
+
             let maintenanceCalories = Math.round((weight * 24) * activityMultiplier);
 
             if(goal === 'build') {
